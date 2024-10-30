@@ -1,0 +1,20 @@
+<section 
+   x-data="{
+        isVisibleMission: false,
+        observe() {
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        this.isVisibleMission = true;
+                    }
+                });
+            }, { threshold: 0.1 });
+            observer.observe(this.$el);
+        }
+    }" 
+    x-init="observe"
+    class="bg-orange md:px-15 px-5 md:py-20 py-10">
+    <div :class="{'in-view': isVisibleMission}" class="fade-slide-up max-w-200 mx-auto text-center md:text-h3 text-h5 font-unna w-full">
+        {{ mission.description }}
+    </div>
+</section>

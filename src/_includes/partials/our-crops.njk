@@ -1,0 +1,132 @@
+<section 
+   x-data="{
+        isVisibleOurCrops: false,
+        observe() {
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        this.isVisibleOurCrops = true;
+                    }
+                });
+            }, { threshold: 0.1 });
+            observer.observe(this.$el);
+        }
+    }" 
+    x-init="observe"
+    class="bg-cloud-burst md:px-15 px-5 md:py-20 py-10">
+    <div class="max-w-240 mx-auto w-full text-white">
+        <h2 :class="{'in-view': isVisibleOurCrops}" class="fade-slide-up leading-none text-white font-unna lg:text-xxl md:text-new-h1-mobile text-h3 mb-5 text-center">
+            Our Crops
+        </h2>
+        <div :class="{'in-view': isVisibleOurCrops}" class="fade-slide-up delay">
+        <div x-data="{
+            crops: [
+                {
+                    image: 'https://res.cloudinary.com/dhbxtuy5b/image/upload/v1730247774/hops_xtyzb8.jpg',
+                    text: {
+                        title: 'Hops', 
+                        description: '385 acres of hops planted, with varieties ranging from 2-26 years', 
+                        varieties: [
+                            {
+                                name: 'Strata',
+                                acres: 5, 
+                                description: 'Used in IPAs, Pale Ales, and Lagers' 
+                            },
+                            {
+                                name: 'Citra',
+                                acres: 17,
+                                description: 'The most widely grown U.S. hop in the Pacific Northwest (PNW), popular in IPAs'
+                            },
+                            {
+                                name: 'Mosaic', 
+                                acres: 107,
+                                description: 'PNW favorite, especially in hazy IPAs'  
+                            },
+                            {
+                                name: 'Talu', 
+                                acres: 21,
+                                description: 'Newer variety, grown for fresh hops, and highly sought after for Pilsners'  
+                            },
+                        ],
+                    },
+                },
+                {
+                    image: 'https://res.cloudinary.com/dhbxtuy5b/image/upload/v1730242964/hazelnuts_rpkjwi.jpg',
+                    text: {
+                        title: 'Hazelnuts', 
+                        subtitle: 'Grown in Oregon',  
+                        description: 'The Willamette Valley provides the perfect conditions for optimal hazelnuts growth. Our large, plump Oregon Jeffersons are known for their rich flavor and inshell quality. Westwood’s abundant orchard production contributes to Oregon’s yields that supply 99% of U.S. hazelnuts production. Oregon hazelnuts are considered by many to be the best in the world.'  
+                    }
+                },
+            ],
+            activeIndex: 0,
+            nextSlide() {
+                this.activeIndex = (this.activeIndex + 1) % this.crops.length;
+                console.log('Next Slide:', this.activeIndex);
+            },
+            prevSlide() {
+                this.activeIndex = (this.activeIndex - 1 + this.crops.length) % this.crops.length;
+                console.log('Previous Slide:', this.activeIndex);
+            },
+            goToSlide(index) {
+                this.activeIndex = index;
+                console.log('Go To Slide:', this.activeIndex);
+            }
+         }"      
+         class=" mt-10 relative w-full max-w-240 mx-auto overflow-hidden">
+
+            <!-- Carousel items -->
+            <div class="delay flex transition-transform duration-500 transform" 
+            :class="{'traslate-x-0': activeIndex === 0, '-translate-x-full': activeIndex === 1}">
+                <template x-for="(crop, index) in crops" :key="index">
+                    <div class="md:px-20 px-12 w-full flex-shrink-0 transition-all duration-500 delay-75" 
+                         :class="{'h-0 opacity-0': activeIndex !== index, 'h-auto opacity-100': activeIndex === index}" 
+                         x-ref="slides">
+                        <div class="flex lg:flex-row flex-col items-center" :id="crop.title">
+                            <h3 class="lg:hidden text-calibri text-h4 text-orange mb-2" x-text="crop.text.title"></h3>
+                            <template x-if="crop.text.varieties">
+                                <p class="lg:hidden italic text-center" x-text="crop.text.description"></p>
+                            </template>
+                            <div class="relative lg:w-1/2 w-full overflow-hidden lg:pt-0 pt-8">
+                                <div class="xl:mx-10 lg:mx-5 lg:pb-6/5 pb-3/4 relative overflow-hidden inset-0 w-auto rounded-full">
+                                    <img class="absolute w-full h-full inset-0 object-cover object-center" :src="crop.image">
+                                </div>
+                            </div>
+                                
+                            <div class="lg:w-1/2 xl:px-10 lg:px-5 lg:pt-0 pt-8">
+                                <h3 class="lg:block hidden text-calibri text-h4 text-orange mb-2" x-text="crop.text.title"></h3>
+                                <p class="lg:block hidden italic mb-6" x-text="crop.text.description"></p>
+                                <template x-if="!crop.text.varieties">
+                                    <p class="lg:hidden italic text-center" x-text="crop.text.description"></p>
+                                </template>
+                                <template x-if="crop.text.varieties">
+                                    <template x-for="variant in crop.text.varieties" :key="variant.name">
+                                        <div class="mb-4 lg:text-left text-center">
+                                            <h4 class="text-orange leading-tight intro mb-2" x-text="variant.name"><span class="text-calibri" x-text="' | ' + variant.acres + ' acres'"></span></h4>
+                                            <p class="" x-text="variant.description"></p>
+                                        </div>
+                                    </template>
+                                </template>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <button @click="prevSlide" class="absolute h-full left-0 top-1/2 transform -translate-y-1/2 bg-cloud-burst" :class="{'pointer-events-none cursor-default': activeIndex === 0}">
+               <svg class="transform -scale-x-100 lg:w-11 lg:h-20 w-5 h-10"  :class="{'opacity-30 pointer-events-none': activeIndex === 0, 'opacity-100': activeIndex === 1}" viewBox="0 0 42 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.35348 0.646454L41.3535 40.6465M0.650879 79.642L40.6509 40.642" stroke="#ECBD65"/>
+                </svg>
+            </button>
+            <button @click="nextSlide" class="absolute h-full right-0 top-1/2 transform -translate-y-1/2 bg-cloud-burst" :class="{'pointer-events-none cursor-default': activeIndex === 1}">
+                <svg class="lg:w-11 lg:h-20 w-5 h-10" :class="{'opacity-30 pointer-events-none cursor-default': activeIndex === 1, 'opacity-100': activeIndex === 0}" viewBox="0 0 42 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.35348 0.646454L41.3535 40.6465M0.650879 79.642L40.6509 40.642" stroke="#ECBD65"/>
+                </svg>
+            </button>
+            
+           
+        </div>
+        </div>
+    </div>
+</section>

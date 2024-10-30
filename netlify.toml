@@ -1,0 +1,16 @@
+[build]
+	publish = "dist"
+	command = "npm run build"
+
+# Netlify Production Build
+
+#[build.production]
+#  command = ""
+
+[context.production.processing.images]
+  compress = true
+
+# Netlify Staging Build
+
+[context.branch-deploy]
+  command = "npm run build"

@@ -1,0 +1,73 @@
+// .fade-up {
+//     transform: translateY(.5rem);
+//     transition: transform .75s ease, opacity .75s ease;
+//     @apply opacity-0;
+//     &.in-viewport {
+//         transform: translateY(0);
+//         @apply opacity-100;
+//     }
+// }
+
+// .fade-in {
+//     @apply opacity-0;
+//     transition: opacity .75s ease;
+
+//     &.in-viewport {
+//         @apply opacity-100;
+//     }
+// }
+
+// .delay {
+//     transition-delay: .25s;
+// }
+// .double-delay {
+//     transition-delay: .5s;
+// }
+// .triple-delay {
+//     transition-delay: .75s;
+// }
+
+// .in-viewport .fade-up {
+//     transform: translateY(0);
+//     @apply opacity-100;
+// }
+
+// .fade-zoom {
+//     transform: scale(1.1);
+//     opacity: .5;
+//     transition: transform .75s ease, opacity .75s ease;
+//     &.in-viewport {
+//         transform: scale(1);
+//         opacity: 1;
+//     }
+// }
+
+// .in-viewport .fade-zoom {
+//     transform: scale(1);
+//     opacity: 1;
+// }
+
+
+// @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+//     .fade-up {
+//         transform: translateY(0);
+//         @apply opacity-100;
+//     }
+    
+//     .fade-in {
+//         @apply opacity-100;
+//     }
+
+//     .fade-zoom {
+//         transform: scale(1);
+//         @apply opacity-100;
+//     }
+// }
+
+// button, .btn {
+//     transition: background .33s ease-in;
+//     &:hover {
+//         @apply bg-blue;
+//         @apply text-white;
+//     }
+// }

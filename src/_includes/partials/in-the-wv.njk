@@ -1,0 +1,23 @@
+<section 
+    x-data="{
+        isVisibleInTheWV: false,
+        observe() {
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        this.isVisibleInTheWV = true;
+                    }
+                });
+            }, { threshold: 0.1 });
+            observer.observe(this.$el);
+        }
+    }" 
+    x-init="observe"
+    class="lg:min-h-screen w-full h-full relative flex">
+    <img class="absolute object-cover w-full h-full object-center inset-0" src="{{ inThe.image }}">
+    <div class="lg:py-40 md:py-20 py-10 transform md:ml-auto md:max-w-80 text-left xl:transform xl:-translate-x-1/2 xl:mr-0 lg:mr-25 md:mr-15 md:px-0 px-5 w-full">
+        <h2 :class="{'in-view': isVisibleInTheWV}" class="fade-slide-up leading-none text-white font-unna lg:text-xxl md:text-new-h1-mobile text-h3 mb-5">{{ inThe.title }}</h2>
+        <p :class="{'in-view': isVisibleInTheWV}" class="fade-slide-up delay text-orange leading-tight intro mb-5">{{ inThe.intro }}</p>
+        <p :class="{'in-view': isVisibleInTheWV}" class="fade-slide-up delay_2 text-white">{{ inThe.body }}</p>        
+    </div>
+</section>

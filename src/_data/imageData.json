@@ -1,0 +1,7 @@
+{
+    "cloudinary": "https://res.cloudinary.com/dhbxtuy5b/image/upload",
+    "auto_quality": "q_auto,f_auto",
+    "high_quality": "dpr_2.0,q_auto,f_auto",
+    "crop": "c_fill",
+    "auto_crop": "g_auto"
+}

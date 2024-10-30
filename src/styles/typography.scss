@@ -1,0 +1,205 @@
+// h1 {
+//   @apply font-itc;
+//   @apply text-xxl;
+//   @apply font-bold;
+//   @apply lowercase;
+//   @apply leading-1;
+//   @screen md {
+//     @apply text-xxxl;
+//   }
+// }
+
+// .section-h1 {
+//   @apply font-itc;
+//   @apply text-h1-mobile;
+//   @apply font-bold;
+//   @apply lowercase;
+//   @apply leading-0.8;
+//   @screen md {
+//     @apply text-xxl;
+//   }
+// }
+
+// .display {
+//   @apply font-itc;
+//   @apply text-h1-mobile;
+//   @apply font-bold;
+//   @apply lowercase;
+//   @apply leading-0.9;
+//   @screen sm {
+//     @apply text-xxxl;
+//   }
+//   @screen mid-tablet {
+//     @apply text-h1;
+//   }
+// }
+
+// .carousel-h2 {
+//   @apply font-itc;
+//   @apply text-h2;
+//   @apply font-bold;
+//   @apply lowercase;
+//   @apply leading-0.8;
+//   @screen xl {
+//     @apply text-xl;
+//   }
+// }
+
+// .carousel-decoration {
+//   @apply font-calibri;
+//   @apply text-h2;
+//   @apply font-medium;
+//   @apply lowercase;
+// }
+
+// h2,
+// .h2 {
+//   @apply font-itc;
+//   @apply text-lg;
+//   @apply font-bold;
+//   @apply lowercase;
+//   @screen md {
+//     font-size: 40px;
+//   }
+//   @screen mid-tablet {
+//     @apply text-h2;
+//   }
+// }
+
+// h3,
+// .h3 {
+//   @apply font-itc;
+//   @apply text-h5;
+//   @apply font-bold;
+//   @apply normal-case;
+//   @apply leading-1.2;
+//   @screen md {
+//     @apply text-h3;
+//   }
+// }
+
+// h4,
+// .h4 {
+//   @apply font-itc;
+//   @apply text-h5;
+//   @apply font-bold;
+// }
+
+// h5,
+// .h5 {
+//   @apply font-itc;
+//   @apply text-h5;
+//   @apply font-bold;
+//   @apply lowercase;
+// }
+
+.intro {
+  @apply font-unna;
+  @apply italic;
+  @apply text-lg;
+  @apply normal-case;
+  @screen md {
+    @apply text-lg;
+  }
+}
+
+// .hero-wrapper .intro {
+//   @apply font-itc;
+//   font-size: 17px;
+//   @apply font-bold;
+//   @apply normal-case;
+//   @screen md {
+//     @apply text-md;
+//   }
+// }
+
+// .subheader {
+//   @apply font-itc;
+//   @apply text-sm;
+//   @apply font-bold;
+//   @apply uppercase;
+//   @apply tracking-25;
+// }
+
+// .list {
+//   @apply font-itc;
+//   @apply text-base;
+//   @apply font-bold;
+//   @apply lowercase;
+//   @screen md {
+//     @apply text-lg;
+//   }
+// }
+
+// .sublist {
+//   @apply font-itc;
+//   @apply text-xs;
+//   @apply font-bold;
+//   @apply lowercase;
+//   @screen md {
+//     @apply text-sm;
+//   }
+//   li {
+//     @apply relative;
+//     @apply pl-3;
+//     &:before {
+//       content: "";
+//       width: 5px;
+//       height: 5px;
+//       @apply rounded-full;
+//       @apply bg-gold;
+//       @apply absolute;
+//       top: 9px;
+//       @apply left-0;
+
+//       @screen md {
+//         top: 14px;
+//       }
+//     }
+//   }
+// }
+
+// .nav {
+//   @apply font-itc;
+//   @apply text-micro;
+//   @apply font-bold;
+//   @apply normal-case;
+//   @screen md {
+//     @apply text-xs;
+//   }
+// }
+
+// .label {
+//   @apply font-itc;
+//   @apply text-md;
+//   @apply uppercase;
+//   @screen md {
+//     @apply text-xs;
+//   }
+// }
+
+.link {
+  @apply font-calibri;
+  @apply text-micro;
+  @screen md {
+      @apply text-xs;
+  }
+}
+
+p,
+.p {
+  @apply font-calibri;
+  @apply text-base;
+  @apply font-medium;
+  @apply normal-case;
+  @apply leading-1.5;
+}
+
+// .p-bold,
+// .markdown p {
+//   @apply font-itc;
+//   @apply text-base;
+//   @apply font-bold;
+//   @apply normal-case;
+//   @apply leading-1.5;
+// }

@@ -1,0 +1,63 @@
+<footer 
+     x-data="{
+        isVisibleFooter: false,
+        observe() {
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        this.isVisibleFooter = true;
+                    }
+                });
+            }, { threshold: 0.1 });
+            observer.observe(this.$el);
+        }
+    }" 
+    x-init="observe"
+    id="sign-up" class="flex flex-col bg-wheat md:p-10 md:pb-8 pb-8 pt-10 px-5">
+    <section class=" relative">
+            <div class="mx-auto" id="mc_embed_shell">
+                <div id="mc_embed_signup" class="w-full">
+                    <form action="https://wwfarms.us10.list-manage.com/subscribe/post?u=96946867828648e349b69c055&amp;id=dc3398bc98&amp;f_id=004b3ce2f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self" novalidate="">
+                        <div id="mc_embed_signup_scroll">
+                            <h2 :class="{'in-view': isVisibleFooter}" class="fade-slide-up text-center md:text-h4 text-lg font-unna italic mb-4">
+                                <span class="block">We’re expanding, and soon, our website will be too!</span>
+                                <span class="block">We’d love to keep you in the loop. </span>
+                            </h2>
+                            <p :class="{'in-view': isVisibleFooter}" class="fade-slide-up text-center text-xs mb-8">Sign up to receive our newsletter.</p>
+                           
+                            <div :class="{'in-view': isVisibleFooter}" class="fade-slide-up delay relative mc-field-group max-w-108 mx-auto">
+                                <label for="mce-FNAME" class="sr-only">first name </label>
+                                <input type="text" name="FNAME" placeholder="first name" class="py-2 placeholder-cloud-burst p block w-full bg-transparent border-b border-cloud-burst text" id="mce-FNAME" value="">
+                            </div>
+                            <div :class="{'in-view': isVisibleFooter}" class="fade-slide-up delay mc-field-group max-w-108 mx-auto mt-4">
+                                <label for="mce-LNAME" class="sr-only">last name </label>
+                                <input type="text" name="LNAME" placeholder="last name" class="py-2 placeholder-cloud-burst p block w-full bg-transparent border-b border-cloud-burst text" id="mce-LNAME" value="">
+                            </div>
+                            <div :class="{'in-view': isVisibleFooter}" class="fade-slide-up delay mc-field-group max-w-108 mx-auto mt-4">
+                                <label for="mce-EMAIL" class="sr-only">email</label>
+                                <input type="email" name="EMAIL" placeholder="email" class="py-2 required emai placeholder-cloud-burst p block w-full bg-transparent border-b border-cloud-burst" id="mce-EMAIL" required="" value="">
+                            </div>
+                            <div id="mce-responses" class="clear">
+                            <div class="response" id="mce-error-response" style="display: none;"></div>
+                            <div class="response" id="mce-success-response" style="display: none;"></div>
+                        </div>
+                        <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                            <input type="text" name="b_96946867828648e349b69c055_dc3398bc98" tabindex="-1" value="">
+                        </div>
+                        <div :class="{'in-view': isVisibleFooter}" class="fade-slide-up delay clear">
+                            <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="cursor-pointer mx-auto button link uppercase link py-4 px-8 border border-cloud-burst block tracking-widest bg-transparent mt-8" value="Subscribe">
+                        </div>
+                    </div>
+                </form>
+                </div>
+            </div>
+    </section>  
+    <div :class="{'in-view': isVisibleFooter}" class="fade-slide-up delay_2 pt-20 flex lg:flex-row flex-col justify-center items-center">
+        <h2 class="link tracking-widest uppercase block lg:mb-0 mb-5">Get in Touch</h2>
+        <div class="flex justify-center items-center md:flex-row flex-col">
+            <a href="mailto:westwood@wwfarms.org" class="block link lg:ml-8">westwood@wwfarms.org</a>
+        <p class="link normalcase md:ml-8 mt-3 block">1022 Goulet Land NE Gervais, OR 97026</p>
+        <a href="tel:971-380-5048" class="link md:ml-8 mt-3 block">971-380-5048</a>
+        </div>
+    </div>
+</footer>

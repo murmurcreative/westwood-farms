@@ -1,0 +1,84 @@
+// .card-body > li {
+//     @apply pb-4;
+
+//     @screen md {
+//       @apply pb-6;
+
+//     }
+//     &:last-of-type {
+//       @apply pb-0;
+//     }
+//   }
+  
+//   .sublist li {
+//     @apply pb-2;
+//     &:last-of-type {
+//       @apply pb-0;
+//     }
+//   }
+
+// .cards .swiper-pagination-bullet {
+//   @apply w-2;
+//   @apply h-2;
+//   background: #C4C4C4;
+//   transition: background .33s ease;
+//   @apply mx-2;
+//   @apply mb-7;
+//   @apply rounded-full;
+//   cursor: pointer;
+
+//   &.swiper-pagination-bullet-active {
+//     @apply bg-gold;
+//   }
+// }
+
+// .factor .card-body.list {
+//   @apply uppercase;
+// }
+
+// .cards .swiper-slide {
+//   @apply h-auto;
+// }
+
+// .card-arrow {
+//   left: calc(100% - 13px);
+//   @screen md {
+//     left: calc(100% - 19px);
+//   }
+// }
+
+// @media screen and (max-width: 1243px) and (min-width: 1131px) {
+//   .card-body .a {
+//     @apply mb-9;
+//   }
+// }
+
+// @media screen and (max-width: 1243px) and (min-width: 1040px) {
+//   .card-body .b {
+//     @apply mb-9;
+//   }
+// }
+
+// @media screen and (max-width: 1038px) and (min-width: 1024px) {
+//   .card-body .c {
+//     @apply mb-9;
+//   }
+// }
+
+// @media screen and (max-width: 407px) {
+//   .card-body .d {
+//     @apply mb-6;
+//   }
+// }
+
+// @media screen and (max-width: 407px) and (min-width: 377px) {
+//   .card-body .e {
+//     @apply mb-6;
+//   }
+// }
+
+// @media screen and (max-width: 323px) {
+//   .card-body .a, .card-body .b {
+//     @apply mb-6;
+//   }
+// }

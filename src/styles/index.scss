@@ -1,7 +1,44 @@
-@import '_reset.scss';
 
-$var: white;
+@import "tailwindcss/base.css";
+@import "tailwindcss/components.css";
+@import "tailwindcss/utilities.css";
 
-body {
-  background-color: $var;
+@import "typography.scss";
+@import "card-carousel.scss";
+@import "newsletter.scss";
+@import "hero.scss";
+@import "animation.scss";
+
+html {
+  font-size: 18px;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+.object-cover {
+  font-family: 'object-fit: cover;';
+}
+
+
+.x-center {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.y-center {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+input::placeholder {
+  @apply text-white;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .grid { 
+      @apply flex;
+      @apply justify-center; 
+    }
+  }
