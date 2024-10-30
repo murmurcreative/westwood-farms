@@ -1,73 +1,58 @@
-// .fade-up {
-//     transform: translateY(.5rem);
-//     transition: transform .75s ease, opacity .75s ease;
-//     @apply opacity-0;
-//     &.in-viewport {
-//         transform: translateY(0);
-//         @apply opacity-100;
-//     }
-// }
+.fade-slide-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.75s ease-in-out, transform 0.75s ease-in-out;
+}
 
-// .fade-in {
-//     @apply opacity-0;
-//     transition: opacity .75s ease;
+.fade-slide-up.delay {
+    transition-delay: 0.25s;
+}
 
-//     &.in-viewport {
-//         @apply opacity-100;
-//     }
-// }
+.fade-slide-up.delay_2 {
+    transition-delay: 0.5s;
+}
 
-// .delay {
-//     transition-delay: .25s;
-// }
-// .double-delay {
-//     transition-delay: .5s;
-// }
-// .triple-delay {
-//     transition-delay: .75s;
-// }
+.hero-wrapper .fade-slide-up {
+    transition-delay: 3s;
+}
 
-// .in-viewport .fade-up {
-//     transform: translateY(0);
-//     @apply opacity-100;
-// }
-
-// .fade-zoom {
-//     transform: scale(1.1);
-//     opacity: .5;
-//     transition: transform .75s ease, opacity .75s ease;
-//     &.in-viewport {
-//         transform: scale(1);
-//         opacity: 1;
-//     }
-// }
-
-// .in-viewport .fade-zoom {
-//     transform: scale(1);
-//     opacity: 1;
-// }
+.hero-wrapper .fade-slide-up.delay {
+    transition-delay: 3.25s;
+}
 
 
-// @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-//     .fade-up {
-//         transform: translateY(0);
-//         @apply opacity-100;
-//     }
-    
-//     .fade-in {
-//         @apply opacity-100;
-//     }
+.hero-wrapper .fade-slide-up.delay_2 {
+    transition-delay: 3.5s;
+}
 
-//     .fade-zoom {
-//         transform: scale(1);
-//         @apply opacity-100;
-//     }
-// }
+.fade-slide-up.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
 
-// button, .btn {
-//     transition: background .33s ease-in;
-//     &:hover {
-//         @apply bg-blue;
-//         @apply text-white;
-//     }
-// }
+@media (orientation: landscape) {
+    .scale-down {
+        opacity: 0;
+        height: 80vh;
+        transition: opacity 0.75s ease-in-out, height 2.5s ease-in-out 0.75s;
+
+        &.in-view {
+            opacity: 1;
+            height: 10rem;
+        }
+    }
+}
+
+
+@media (orientation: portrait) {
+    .scale-down {
+        opacity: 0;
+        width: 80vw;
+        transition: opacity 0.75s ease-in-out, width 2.5s ease-in-out 0.75s;
+
+        &.in-view {
+            opacity: 1;
+            width: 10rem;
+        }
+    }
+}
