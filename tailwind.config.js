@@ -3,6 +3,7 @@ module.exports = {
     // removeDeprecatedGapUtilities: true,
     // purgeLayersByDefault: true,
   },
+  mode: "jit",
   purge: ["./src/**/*.njk", "./src/**/*.js", "./src/**/*.scss"],
   theme: {
     screens: {

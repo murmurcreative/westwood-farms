@@ -13,18 +13,18 @@
         }
     }" 
     x-init="observe"
-    id="sign-up" class="flex flex-col bg-wheat md:p-10 md:pb-8 pb-8 pt-10 px-5">
-    <section class=" relative">
+    id="sign-up" class="flex flex-col bg-wheat ">
+    <section class=" relative md:px-10 px-5 pt-10 pb-18">
             <div class="mx-auto" id="mc_embed_shell">
                 <div id="mc_embed_signup" class="w-full">
-                    <form action="https://wwfarms.us10.list-manage.com/subscribe/post?u=96946867828648e349b69c055&amp;id=dc3398bc98&amp;f_id=004b3ce2f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self" novalidate="">
+                    <form action="https://wwfarms.us10.list-manage.com/subscribe/post?u=96946867828648e349b69c055&amp;id=dc3398bc98&amp;f_id=004b3ce2f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="valib" target="_self" novalidate="">
                         <div id="mc_embed_signup_scroll">
                             <h2 :class="{'in-view': isVisibleFooter}" class="fade-slide-up text-center md:text-h4 text-lg font-unna italic mb-4">
                                 <span class="block">We’re expanding, and soon, our website will be too!</span>
                                 <span class="block">We’d love to keep you in the loop. </span>
                             </h2>
                             <p :class="{'in-view': isVisibleFooter}" class="fade-slide-up text-center text-xs mb-8">Sign up to receive our newsletter.</p>
-                           
+                            
                             <div :class="{'in-view': isVisibleFooter}" class="fade-slide-up delay relative mc-field-group max-w-108 mx-auto">
                                 <label for="mce-FNAME" class="sr-only">first name </label>
                                 <input type="text" name="FNAME" placeholder="first name" class="py-2 placeholder-cloud-burst p block w-full bg-transparent border-b border-cloud-burst text" id="mce-FNAME" value="">
@@ -33,6 +33,12 @@
                                 <label for="mce-LNAME" class="sr-only">last name </label>
                                 <input type="text" name="LNAME" placeholder="last name" class="py-2 placeholder-cloud-burst p block w-full bg-transparent border-b border-cloud-burst text" id="mce-LNAME" value="">
                             </div>
+                            <div :class="{'in-view': isVisibleFooter}" class="fade-slide-up delay mc-field-group max-w-108 mx-auto mt-4">
+                                <label for="mce-PHONE" class="sr-only">phone number </label>
+                                <input type="text" name="PHONE" placeholder="phone number" class="py-2 placeholder-cloud-burst p block w-full bg-transparent border-b border-cloud-burst text" id="mce-PHONE" value=""></div>
+                            <div :class="{'in-view': isVisibleFooter}" class="fade-slide-up delay mc-field-group max-w-108 mx-auto mt-4">
+                                <label for="mce-MMERGE9" class="sr-only">zipcode </label>
+                                <input type="text" name="ZIPCODE" placeholder="zipcode" class="py-2 placeholder-cloud-burst p block w-full bg-transparent border-b border-cloud-burst text" id="mce-ZIPCODE" value=""></div>
                             <div :class="{'in-view': isVisibleFooter}" class="fade-slide-up delay mc-field-group max-w-108 mx-auto mt-4">
                                 <label for="mce-EMAIL" class="sr-only">email</label>
                                 <input type="email" name="EMAIL" placeholder="email" class="py-2 required emai placeholder-cloud-burst p block w-full bg-transparent border-b border-cloud-burst" id="mce-EMAIL" required="" value="">
@@ -45,19 +51,76 @@
                             <input type="text" name="b_96946867828648e349b69c055_dc3398bc98" tabindex="-1" value="">
                         </div>
                         <div :class="{'in-view': isVisibleFooter}" class="fade-slide-up delay clear">
-                            <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="cursor-pointer mx-auto button link uppercase link py-4 px-8 border border-cloud-burst block tracking-widest bg-transparent mt-8" value="Sign Up">
+                            <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="cursor-pointer mx-auto button link uppercase link py-4 px-8 border border-cloud-burst block tracking-widest bg-transparent mt-8" value="Stay up to date">
                         </div>
                     </div>
                 </form>
                 </div>
             </div>
     </section>  
-    <div :class="{'in-view': isVisibleFooter}" class="fade-slide-up delay_2 pt-20 flex lg:flex-row flex-col justify-center items-center">
-        <h2 class="link tracking-widest uppercase block lg:mb-0 mb-5">Get in Touch</h2>
+    <div :class="{'in-view': isVisibleFooter}" class="md:px-10 py-8 px-5 bg-orange fade-slide-up delay_2 flex flex-col justify-center items-center gap-8">
         <div class="flex justify-center items-center md:flex-row flex-col">
             <a href="mailto:westwood@wwfarms.org" class="block link lg:ml-8">westwood@wwfarms.org</a>
-        <p class="link normalcase md:ml-8 md:mt-0 mt-3 block">1022 Goulet Land NE Gervais, OR 97026</p>
-        <a href="tel:971-380-5048" class="link md:ml-8 md:mt-0 mt-3 block">971-380-5048</a>
+            <p class="link normalcase md:ml-8 md:mt-0 mt-3 block">1022 Goulet Lane NE, Gervais, OR 97026</p>
+            <a href="tel:971-380-5048" class="link md:ml-8 md:mt-0 mt-3 block">971-380-5048</a>
         </div>
+        {% if social_media.instagram %}
+        <div class="flex justify-center gap-5">
+            {% if social_media.instagram %}
+            <a target="_blank" href="{{ social_media.instagram }}" class="flex justify-center items-center h-10 w-10  transition-all duration-500">
+					<span class="sr-only">instagram</span>
+					<svg class="" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M11.8275 0H5.6361C2.787 0 0.476562 2.32492 0.476562 5.19187V11.4221C0.476562 14.2891 2.787 16.614 5.6361 16.614H11.8275C14.6766 16.614 16.9871 14.2891 16.9871 11.4221V5.19187C16.9871 2.32492 14.6766 0 11.8275 0ZM15.4392 11.4221C15.4392 13.4262 13.8191 15.0564 11.8275 15.0564H5.6361C3.64452 15.0564 2.02442 13.4262 2.02442 11.4221V5.19187C2.02442 3.18781 3.64452 1.55756 5.6361 1.55756H11.8275C13.8191 1.55756 15.4392 3.18781 15.4392 5.19187V11.4221Z" fill="#131F47" />
+						<path d="M8.7317 4.15347C6.45222 4.15347 4.60407 6.0132 4.60407 8.30697C4.60407 10.6007 6.45222 12.4605 8.7317 12.4605C11.0112 12.4605 12.8593 10.6007 12.8593 8.30697C12.8593 6.0132 11.0112 4.15347 8.7317 4.15347ZM8.7317 10.9029C7.30973 10.9029 6.15193 9.73785 6.15193 8.30697C6.15193 6.87505 7.30973 5.71104 8.7317 5.71104C10.1537 5.71104 11.3115 6.87505 11.3115 8.30697C11.3115 9.73785 10.1537 10.9029 8.7317 10.9029Z" fill="#131F47" />
+						<path d="M13.1693 4.39537C13.473 4.39537 13.7193 4.14758 13.7193 3.84192C13.7193 3.53625 13.473 3.28846 13.1693 3.28846C12.8655 3.28846 12.6193 3.53625 12.6193 3.84192C12.6193 4.14758 12.8655 4.39537 13.1693 4.39537Z" fill="#131F47" />
+					</svg>
+                    </a>
+            {%endif%}
+            {% if social_media.facebook %}
+
+				<a target="_blank" href="{{ social_media.facebook }}" class="flex justify-center items-center h-10 w-10  transition-all duration-500">
+					<span class="sr-only">facebook</span>
+					<svg class="" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M9.04545 0.00332907L6.90974 0C4.51034 0 2.95974 1.54552 2.95974 3.93762V5.75313H0.812382C0.626825 5.75313 0.476562 5.89927 0.476562 6.07954V8.71001C0.476562 8.89028 0.626996 9.03625 0.812382 9.03625H2.95974V15.6738C2.95974 15.854 3.11001 16 3.29556 16H6.09726C6.28282 16 6.43308 15.8539 6.43308 15.6738V9.03625H8.94385C9.1294 9.03625 9.27967 8.89028 9.27967 8.71001L9.28069 6.07954C9.28069 5.99299 9.24523 5.91009 9.18235 5.84884C9.11947 5.78758 9.0338 5.75313 8.9447 5.75313H6.43308V4.2141C6.43308 3.47438 6.61452 3.09886 7.60639 3.09886L9.04511 3.09836C9.23049 3.09836 9.38075 2.95222 9.38075 2.77211V0.329578C9.38075 0.149642 9.23066 0.00366197 9.04545 0.00332907Z" fill="#131F47" />
+					</svg>
+				</a>
+                {% endif %}
+                {% if social_media.tiktok %}
+				<a target="_blank" href="{{ social_media.tiktok }}" class="flex justify-center items-center h-10 w-10  transition-all duration-500">
+					<span class="sr-only">tiktok</span>
+					<svg class="" width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M13.6104 3.65777C13.4949 3.59811 13.3825 3.53271 13.2736 3.46181C12.957 3.25247 12.6667 3.0058 12.4089 2.72712C11.764 1.98922 11.5231 1.24064 11.4344 0.716519H11.438C11.3639 0.281477 11.3945 0 11.3992 0H8.46182V11.3581C8.46182 11.5106 8.46182 11.6613 8.45541 11.8103C8.45541 11.8288 8.45363 11.8459 8.45256 11.8658C8.45256 11.874 8.45256 11.8826 8.45078 11.8911C8.45078 11.8933 8.45078 11.8954 8.45078 11.8976C8.41982 12.3051 8.28918 12.6988 8.07036 13.0439C7.85154 13.3891 7.55125 13.6753 7.19589 13.8772C6.82553 14.0879 6.40665 14.1984 5.98055 14.1978C4.61201 14.1978 3.50285 13.0819 3.50285 11.7037C3.50285 10.3256 4.61201 9.20963 5.98055 9.20963C6.23961 9.20939 6.49708 9.25016 6.74339 9.33042L6.74695 6.33964C5.99921 6.24305 5.23956 6.30248 4.51594 6.51417C3.79231 6.72586 3.12041 7.08522 2.54262 7.56959C2.03634 8.00947 1.61071 8.53434 1.28488 9.12056C1.16089 9.33434 0.693067 10.1934 0.636415 11.5876C0.600785 12.3789 0.838437 13.1988 0.95174 13.5376V13.5447C1.023 13.7443 1.29913 14.4251 1.74914 14.9991C2.11201 15.4596 2.54073 15.864 3.02148 16.1995V16.1924L3.02861 16.1995C4.4506 17.1658 6.02723 17.1024 6.02723 17.1024C6.30015 17.0913 7.21442 17.1024 8.25268 16.6103C9.40424 16.0648 10.0598 15.2521 10.0598 15.2521C10.4787 14.7665 10.8117 14.2131 11.0446 13.6156C11.3104 12.9169 11.3992 12.0789 11.3992 11.744V5.71825C11.4348 5.73963 11.9094 6.05353 11.9094 6.05353C11.9094 6.05353 12.5931 6.49178 13.6599 6.77718C14.4252 6.98027 15.4563 7.02302 15.4563 7.02302V4.10707C15.0951 4.14626 14.3614 4.03224 13.6104 3.65777Z" fill="#131F47" />
+					</svg>
+				</a>
+                {% endif %}
+                {% if social_media.linkedin %}
+				<a target="_blank" href="{{ social_media.linkedin }}" class="flex justify-center items-center h-10 w-10  transition-all duration-500">
+					<span class="sr-only">linkedin</span>
+					<svg class="" width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M4.46572 5.11045H0.963036V16H4.46572V5.11045Z" fill="#131F47" />
+						<path d="M14.0009 5.01492C12.0063 5.01492 10.7415 6.06566 10.4983 6.82984V5.11045H6.55774C6.60639 6.01791 6.55774 16 6.55774 16H10.4983V10.1254C10.4983 9.79104 10.4982 9.45671 10.5955 9.2179C10.8874 8.54924 11.4226 7.8806 12.4928 7.8806C13.855 7.8806 14.4874 8.88358 14.4874 10.3642V16H18.4766V9.93432C18.4279 6.59104 16.482 5.01492 14.0009 5.01492Z" fill="#131F47" />
+						<path d="M2.6171 0C1.30359 0 0.476562 0.81194 0.476562 1.91045C0.476562 2.96119 1.30358 3.77313 2.56843 3.77313H2.6171C3.9306 3.77313 4.7576 2.96119 4.7576 1.86268C4.70895 0.811937 3.9306 0 2.6171 0Z" fill="#131F47" />
+					</svg>
+				</a>
+                {% endif %}
+                {% if social_media.x %}
+				<a target="_blank" href="{{ social_media.x }}" class="flex justify-center items-center h-10 w-10  transition-all duration-500">
+					<span class="sr-only">x (twitter)</span>
+					<svg class="" width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M4.24887 0H1.18223L7.88207 8.04833L0 19H6.1718L11.0054 12.3577L16.5364 19H19.6051L12.4389 10.3916L20 0H13.6719L9.30254 6.07115L4.24887 0ZM5.32527 17.0707H3.62586L14.5952 1.82804H16.4186L5.32527 17.0707Z" fill="#131F47" />
+					</svg>
+				</a>
+                {% endif %}
+                {% if social_media.youtube %}
+				<a target="_blank" href="{{ social_media.youtube }}" class="flex justify-center items-center h-10 w-10  transition-all duration-500">
+					<span class="sr-only">youtube</span>
+					<svg xmlns="http://www.w3.org/2000/svg" width="21" height="14" viewBox="0 0 21 14" fill="none">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M18.7111 0.566522C19.5747 0.798271 20.2566 1.46041 20.4838 2.29912C20.9043 3.82204 20.9043 7.00031 20.9043 7.00031C20.9043 7.00031 20.9043 10.1786 20.4952 11.7015C20.2566 12.5512 19.5861 13.2134 18.7225 13.4341C17.1543 13.8424 10.9043 13.8424 10.9043 13.8424C10.9043 13.8424 4.6543 13.8424 3.09748 13.4341C2.23384 13.2023 1.55202 12.5402 1.32475 11.7015C0.904297 10.1786 0.904297 7.00031 0.904297 7.00031C0.904297 7.00031 0.904297 3.82204 1.31339 2.29912C1.55202 1.44937 2.22248 0.787235 3.08611 0.566522C4.6543 0.158203 10.9043 0.158203 10.9043 0.158203C10.9043 0.158203 17.1543 0.158203 18.7111 0.566522ZM14.0859 7L8.85865 9.89134V4.10866L14.0859 7Z" fill="#131F47" />
+					</svg>
+				</a>
+                {% endif %}
+            </div>
+        {% endif %}
+
     </div>
 </footer>
