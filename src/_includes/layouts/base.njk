@@ -1,6 +1,53 @@
 <!doctype html>
 <html lang="en" class="no-js">
 <head>
+  <!-- Basic Metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Westwood Farms | Regenerative Farming in Oregon's Willamette Valley</title>
+    <meta name="description" content="Discover Westwood Farms, a seventh-generation family farm in Oregon's Willamette Valley, dedicated to regenerative agriculture and sustainable practices. Explore our premium hops and hazelnuts. Learn more!">
+    <meta name="keywords" content="Westwood Farms, regenerative farming, sustainable agriculture, Willamette Valley, Oregon farms, hops cultivation, hazelnuts, family-owned farm, conservation, environmental stewardship">
+    <meta name="author" content="Westwood Farms">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#4CAF50">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wwfarms.org/">
+    <meta property="og:title" content="Westwood Farms - Regenerative Farming in Oregon's Willamette Valley">
+    <meta property="og:description" content="Discover Westwood Farms, a seventh-generation family farm in Oregon's Willamette Valley, dedicated to regenerative agriculture and sustainable practices.">
+    <meta property="og:image" content="https://wwfarms.org/images/farm-overview.jpg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://wwfarms.org/">
+    <meta name="twitter:title" content="Westwood Farms - Regenerative Farming in Oregon's Willamette Valley">
+    <meta name="twitter:description" content="Discover Westwood Farms, a seventh-generation family farm in Oregon's Willamette Valley, dedicated to regenerative agriculture and sustainable practices.">
+    <meta name="twitter:image" content="https://wwfarms.org/images/farm-overview.jpg">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Farm",
+      "name": "Westwood Farms",
+      "description": "Westwood Farms is a seventh-generation family farm in Oregon's Willamette Valley, specializing in regenerative agriculture with premium hops and hazelnuts.",
+      "url": "https://wwfarms.org/",
+      "image": "https://wwfarms.org/images/farm-overview.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1022 Goulet Lane NE",
+        "addressLocality": "Gervais",
+        "addressRegion": "OR",
+        "postalCode": "97026",
+        "addressCountry": "US"
+      },
+      "telephone": "+1-971-380-5048",
+      "email": "info@wwfarms.org"
+    }
+    </script>
+
+
   <meta charset="utf-8">
   <script>
     document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'has-js ';
@@ -14,11 +61,22 @@
 
   <link rel="stylesheet" href="/styles/index.css">
   
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-  <link rel="manifest" href="/images/site.webmanifest">
+<link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
+<link rel="shortcut icon" href="/images/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="MyWebSite" />
+<link rel="manifest" href="/images/site.webmanifest" />
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FSCZGDFEFQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FSCZGDFEFQ');
+</script>
 <body id="top" class="text-cloud-burst" itemscope itemtype="http://schema.org/WebPage">
   {{ content | safe }}
   <script src="/scripts/index.js"></script>
